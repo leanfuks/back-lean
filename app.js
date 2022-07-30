@@ -6,7 +6,7 @@ const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const PeinadosRouter= require('./routes/peinados');
-const ApiRouter = require("./routes/api")
+const apiRouter = require('./routes/api')
 const { dbConnection } = require('./db/db');
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/peinados', PeinadosRouter);
-app.use("/api", ApiRouter)
+app.use('/api', apiRouter)
 dbConnection();
 
 module.exports = app;
