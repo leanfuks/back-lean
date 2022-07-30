@@ -69,4 +69,5 @@ const api = async(req,res)=>{
     });
     res.status(200).json(resultado.data)
 }
+
 module.exports={controller, index, verPeinado, crearPeinado, verUnPeinado, editarPeinado, borrarPeinado, api }
